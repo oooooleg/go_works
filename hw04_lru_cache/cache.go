@@ -18,10 +18,10 @@ type lruCache struct {
 	backItems map[interface{}]Key
 }
 
-type cacheItem struct {
-	key   Key
-	value interface{}
-}
+// type cacheItem struct {
+// 	key   Key
+// 	value interface{}
+// }
 
 func (c *lruCache) Set(key Key, value interface{}) bool {
 	c.lock.Lock()
